@@ -1,582 +1,100 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About – EAS PTO</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-:root {
-  --forest:    #2d5a27;
-  --forest-dk: #1a3a16;
-  --forest-lt: #3d7a35;
-  --sage:      #7aab6d;
-  --mint:      #c8e6c0;
-  --cream:     #f8f5f0;
-  --tan:       #e8e0d0;
-  --brown:     #6b5a3e;
-  --text:      #2c2c2c;
-  --text-lt:   #5a5a5a;
-  --white:     #ffffff;
-  --radius:    10px;
-  --shadow:    0 2px 16px rgba(45,90,39,0.10);
-  --shadow-lg: 0 8px 40px rgba(45,90,39,0.15);
-}
+  <script src="js/nav.js"></script>
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  <div class="page-header">
+    <h1>About the EAS PTO</h1>
+    <p>Who we are, what we stand for, and how we're organized.</p>
+  </div>
 
-html { scroll-behavior: smooth; }
+  <main>
 
-body {
-  font-family: 'DM Sans', sans-serif;
-  color: var(--text);
-  background: var(--cream);
-  line-height: 1.65;
-  font-size: 16px;
-}
+    <!-- MISSION -->
+    <h2 class="section-title">Our Mission</h2>
+    <div class="divider"></div>
+    <ul class="mission-list">
+      <li>To promote the participation of parents in the educational process.</li>
+      <li>To promote communication between teachers, parents, and students.</li>
+      <li>To generate financial support for educational programs.</li>
+      <li>To provide opportunities for student involvement in the community.</li>
+      <li>To enhance the educational experience through environmental awareness and adventure learning opportunities.</li>
+    </ul>
 
-/* ── NAV ── */
-nav {
-  background: var(--forest-dk);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.25);
-}
-.nav-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 68px;
-}
-.nav-brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
-}
-.nav-brand img {
-  height: 44px;
-  width: auto;
-  filter: brightness(0) invert(1);
-}
-.nav-brand-text {
-  display: flex;
-  flex-direction: column;
-}
-.nav-brand-name {
-  font-family: 'Lora', serif;
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--white);
-  line-height: 1.2;
-}
-.nav-brand-sub {
-  font-size: 0.7rem;
-  color: var(--sage);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 4px;
-  align-items: center;
-}
-.nav-links a {
-  color: rgba(255,255,255,0.85);
-  text-decoration: none;
-  padding: 8px 14px;
-  border-radius: 6px;
-  font-size: 0.88rem;
-  font-weight: 500;
-  transition: all 0.2s;
-}
-.nav-links a:hover,
-.nav-links a.active {
-  background: rgba(255,255,255,0.12);
-  color: var(--white);
-}
-.nav-donate {
-  background: var(--sage) !important;
-  color: var(--forest-dk) !important;
-  font-weight: 600 !important;
-  padding: 8px 18px !important;
-}
-.nav-donate:hover {
-  background: var(--mint) !important;
-}
-.nav-hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-  padding: 8px;
-  background: none;
-  border: none;
-}
-.nav-hamburger span {
-  display: block;
-  width: 24px;
-  height: 2px;
-  background: var(--white);
-  border-radius: 2px;
-  transition: all 0.3s;
-}
+    <!-- JOIN -->
+    <h2 class="section-title">Join the PTO</h2>
+    <div class="divider"></div>
+    <div class="info-box" style="margin-bottom:40px;">
+      <p>We'd love to have you! Download our membership form, fill it out, and return it to the EAS Office — or email it to <a href="mailto:treasurer@easpto.org" style="color:var(--forest);font-weight:600;">treasurer@easpto.org</a>. You can also find a copy in the PTO Basket in the EAS office.</p>
+      <a href="docs/membership-form.pdf" class="btn btn-forest" style="margin-top:8px;" download>📄 Download Membership Form</a>
+    </div>
 
-/* ── HERO ── */
-.hero {
-  background: linear-gradient(160deg, var(--forest-dk) 0%, var(--forest) 60%, var(--forest-lt) 100%);
-  color: var(--white);
-  padding: 80px 24px 70px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  pointer-events: none;
-}
-.hero-inner { max-width: 700px; margin: 0 auto; position: relative; }
-.hero-eyebrow {
-  display: inline-block;
-  background: rgba(255,255,255,0.12);
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 30px;
-  padding: 5px 18px;
-  font-size: 0.78rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  color: var(--mint);
-}
-.hero h1 {
-  font-family: 'Lora', serif;
-  font-size: clamp(2rem, 5vw, 3.2rem);
-  font-weight: 600;
-  line-height: 1.2;
-  margin-bottom: 16px;
-}
-.hero p {
-  font-size: 1.1rem;
-  color: rgba(255,255,255,0.82);
-  max-width: 540px;
-  margin: 0 auto 32px;
-}
-.hero-btns {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.btn {
-  display: inline-block;
-  padding: 13px 28px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.9rem;
-  transition: all 0.2s;
-  cursor: pointer;
-  border: none;
-}
-.btn-primary {
-  background: var(--sage);
-  color: var(--forest-dk);
-}
-.btn-primary:hover { background: var(--mint); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(0,0,0,0.2); }
-.btn-outline {
-  background: transparent;
-  color: var(--white);
-  border: 2px solid rgba(255,255,255,0.5);
-}
-.btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.1); }
-.btn-forest {
-  background: var(--forest);
-  color: var(--white);
-}
-.btn-forest:hover { background: var(--forest-lt); transform: translateY(-1px); }
+    <!-- DOCUMENTS -->
+    <h2 class="section-title">Documents</h2>
+    <div class="divider"></div>
+    <div class="doc-list">
+      <a href="docs/membership-form.pdf" class="doc-link" download><span class="doc-icon">📋</span> Membership Form</a>
+      <a href="docs/budget.pdf" class="doc-link" download><span class="doc-icon">💰</span> 2025–2026 Budget</a>
+      <a href="docs/standing-rules.pdf" class="doc-link" download><span class="doc-icon">📜</span> Standing Rules</a>
+      <a href="docs/org-chart.pdf" class="doc-link" download><span class="doc-icon">🗂️</span> Organizational Chart</a>
+      <a href="meetings.html" class="doc-link"><span class="doc-icon">📅</span> Meeting Info</a>
+    </div>
 
-/* ── QUICK LINKS BAR ── */
-.quick-links {
-  background: var(--white);
-  border-bottom: 1px solid var(--tan);
-  padding: 14px 24px;
-}
-.quick-links-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.quick-link {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 7px 16px;
-  background: var(--cream);
-  border: 1px solid var(--tan);
-  border-radius: 24px;
-  text-decoration: none;
-  color: var(--forest);
-  font-size: 0.84rem;
-  font-weight: 500;
-  transition: all 0.2s;
-}
-.quick-link:hover {
-  background: var(--forest);
-  color: var(--white);
-  border-color: var(--forest);
-}
-.quick-link .icon { font-size: 1rem; }
+    <!-- OFFICERS -->
+    <h2 class="section-title">2024–2025 Board of Officers</h2>
+    <div class="divider"></div>
+    <div class="officer-grid">
+      <div class="officer-card">
+        <div class="officer-role">Co-Presidents</div>
+        <div class="officer-name">Susan Cockrell</div>
+        <div class="officer-name">Sara Oppler</div>
+      </div>
+      <div class="officer-card">
+        <div class="officer-role">VP of Curriculum Support</div>
+        <div class="officer-name">Stephanie Chow</div>
+      </div>
+      <div class="officer-card">
+        <div class="officer-role">Co-Treasurers</div>
+        <div class="officer-name">Michelle McPherson</div>
+        <div class="officer-name">Cameron Stillion</div>
+      </div>
+      <div class="officer-card">
+        <div class="officer-role">Assistant Treasurer</div>
+        <div class="officer-name">Alice Wong</div>
+      </div>
+      <div class="officer-card">
+        <div class="officer-role">VP of Student Activities</div>
+        <div class="officer-name">Shannon Martin</div>
+      </div>
+      <div class="officer-card">
+        <div class="officer-role">Secretary</div>
+        <div class="officer-name">Jennifer Junkin</div>
+      </div>
+      <div class="officer-card">
+        <div class="officer-role">VP of Information Support</div>
+        <div class="officer-name">Jaime Lusardo</div>
+      </div>
+    </div>
 
-/* ── MAIN CONTENT ── */
-main { max-width: 1100px; margin: 0 auto; padding: 56px 24px; }
+    <!-- CONTACT -->
+    <div class="highlight-box">
+      <h2>Contact the Board</h2>
+      <p>Have questions, ideas, or want to get more involved? We'd love to hear from you. Reach out to the co-presidents at <a href="mailto:president@easpto.org" style="color:var(--mint);font-weight:600;">president@easpto.org</a> or contact our treasurer at <a href="mailto:treasurer@easpto.org" style="color:var(--mint);font-weight:600;">treasurer@easpto.org</a>.</p>
+    </div>
 
-/* ── SECTION TITLES ── */
-.section-title {
-  font-family: 'Lora', serif;
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: var(--forest-dk);
-  margin-bottom: 8px;
-}
-.section-sub {
-  color: var(--text-lt);
-  font-size: 0.95rem;
-  margin-bottom: 36px;
-}
-.divider {
-  width: 48px;
-  height: 3px;
-  background: var(--sage);
-  border-radius: 2px;
-  margin: 12px 0 32px;
-}
+  </main>
 
-/* ── CARDS ── */
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 24px;
-  margin-bottom: 48px;
-}
-.card {
-  background: var(--white);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  overflow: hidden;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
-.card-header {
-  background: linear-gradient(135deg, var(--forest), var(--forest-lt));
-  padding: 20px 24px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.card-icon { font-size: 1.6rem; }
-.card-header h3 {
-  font-family: 'Lora', serif;
-  font-size: 1.1rem;
-  color: var(--white);
-  font-weight: 600;
-}
-.card-body { padding: 20px 24px; }
-.card-body p { color: var(--text-lt); font-size: 0.93rem; margin-bottom: 16px; }
-.card-link {
-  color: var(--forest);
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.88rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  transition: gap 0.2s;
-}
-.card-link:hover { gap: 8px; color: var(--forest-lt); }
+  <div class="contact-strip">
+    <p>Questions? Reach out anytime.</p>
+    <a href="mailto:president@easpto.org">president@easpto.org</a>
+  </div>
 
-/* ── STAFF CARDS ── */
-.staff-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 24px;
-}
-.staff-card {
-  background: var(--white);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  overflow: hidden;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.staff-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
-.staff-card-top {
-  background: linear-gradient(135deg, var(--forest-dk), var(--forest));
-  padding: 20px 24px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-.staff-avatar {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background: var(--sage);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Lora', serif;
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: var(--forest-dk);
-  flex-shrink: 0;
-}
-.staff-name {
-  font-family: 'Lora', serif;
-  font-size: 1.05rem;
-  color: var(--white);
-  font-weight: 600;
-}
-.staff-card-body { padding: 20px 24px; }
-.staff-row {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 12px;
-  font-size: 0.88rem;
-}
-.staff-label {
-  font-weight: 600;
-  color: var(--forest);
-  min-width: 90px;
-  flex-shrink: 0;
-}
-.staff-value { color: var(--text-lt); }
-
-/* ── OFFICER TABLE ── */
-.officer-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 16px;
-  margin-bottom: 40px;
-}
-.officer-card {
-  background: var(--white);
-  border: 1px solid var(--tan);
-  border-left: 4px solid var(--sage);
-  border-radius: 8px;
-  padding: 16px 18px;
-}
-.officer-role {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--forest);
-  font-weight: 600;
-  margin-bottom: 4px;
-}
-.officer-name {
-  font-family: 'Lora', serif;
-  font-size: 0.95rem;
-  color: var(--text);
-  font-weight: 600;
-}
-
-/* ── MISSION LIST ── */
-.mission-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-bottom: 36px;
-}
-.mission-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  background: var(--white);
-  border-radius: 8px;
-  padding: 14px 18px;
-  box-shadow: var(--shadow);
-  font-size: 0.95rem;
-}
-.mission-list li::before {
-  content: '🌿';
-  font-size: 1rem;
-  flex-shrink: 0;
-  margin-top: 1px;
-}
-
-/* ── DOCS LIST ── */
-.doc-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 40px;
-}
-.doc-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 20px;
-  background: var(--white);
-  border: 1px solid var(--tan);
-  border-radius: 8px;
-  color: var(--forest);
-  text-decoration: none;
-  font-size: 0.88rem;
-  font-weight: 500;
-  transition: all 0.2s;
-  box-shadow: var(--shadow);
-}
-.doc-link:hover {
-  background: var(--forest);
-  color: var(--white);
-  border-color: var(--forest);
-}
-.doc-icon { font-size: 1.1rem; }
-
-/* ── PROGRAMS ── */
-.program-section {
-  background: var(--white);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 32px 36px;
-  margin-bottom: 28px;
-}
-.program-section h3 {
-  font-family: 'Lora', serif;
-  font-size: 1.25rem;
-  color: var(--forest-dk);
-  margin-bottom: 10px;
-}
-.program-section p { color: var(--text-lt); margin-bottom: 16px; font-size: 0.95rem; }
-
-/* ── MEETINGS INFO ── */
-.info-box {
-  background: var(--white);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 32px 36px;
-  border-left: 5px solid var(--sage);
-  margin-bottom: 28px;
-}
-.info-box p { color: var(--text-lt); font-size: 0.98rem; margin-bottom: 12px; }
-.info-box p:last-child { margin-bottom: 0; }
-
-/* ── PAYMENTS ── */
-.payment-card {
-  background: var(--white);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 32px 36px;
-  margin-bottom: 24px;
-  display: flex;
-  gap: 24px;
-  align-items: flex-start;
-}
-.payment-icon { font-size: 2.4rem; flex-shrink: 0; }
-.payment-body h3 {
-  font-family: 'Lora', serif;
-  font-size: 1.15rem;
-  color: var(--forest-dk);
-  margin-bottom: 8px;
-}
-.payment-body p { color: var(--text-lt); font-size: 0.93rem; margin-bottom: 16px; }
-
-/* ── PAGE HEADER ── */
-.page-header {
-  background: linear-gradient(135deg, var(--forest-dk) 0%, var(--forest) 100%);
-  color: var(--white);
-  padding: 52px 24px 44px;
-  text-align: center;
-}
-.page-header h1 {
-  font-family: 'Lora', serif;
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-.page-header p {
-  color: rgba(255,255,255,0.80);
-  max-width: 560px;
-  margin: 0 auto;
-  font-size: 1rem;
-}
-
-/* ── CONTACT STRIP ── */
-.contact-strip {
-  background: var(--forest-dk);
-  color: var(--white);
-  text-align: center;
-  padding: 36px 24px;
-}
-.contact-strip p { color: rgba(255,255,255,0.75); margin-bottom: 8px; font-size: 0.92rem; }
-.contact-strip a {
-  color: var(--sage);
-  text-decoration: none;
-  font-weight: 600;
-}
-.contact-strip a:hover { color: var(--mint); }
-
-/* ── FOOTER ── */
-footer {
-  background: var(--forest-dk);
-  color: rgba(255,255,255,0.6);
-  text-align: center;
-  padding: 28px 24px;
-  font-size: 0.83rem;
-  border-top: 1px solid rgba(255,255,255,0.08);
-}
-footer a { color: var(--sage); text-decoration: none; }
-footer a:hover { color: var(--mint); }
-
-/* ── UTILITY ── */
-.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
-.highlight-box {
-  background: linear-gradient(135deg, var(--forest), var(--forest-lt));
-  color: var(--white);
-  border-radius: var(--radius);
-  padding: 32px 36px;
-  margin-bottom: 40px;
-}
-.highlight-box h2 {
-  font-family: 'Lora', serif;
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-.highlight-box p { color: rgba(255,255,255,0.85); font-size: 0.95rem; }
-.tag {
-  display: inline-block;
-  background: var(--mint);
-  color: var(--forest-dk);
-  border-radius: 4px;
-  padding: 2px 8px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-
-/* ── RESPONSIVE ── */
-@media (max-width: 768px) {
-  .nav-links { display: none; }
-  .nav-links.open {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 68px;
-    left: 0;
-    right: 0;
-    background: var(--forest-dk);
-    padding: 16px;
-    gap: 4px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-  }
-  .nav-hamburger { display: flex; }
-  .two-col { grid-template-columns: 1fr; }
-  .payment-card { flex-direction: column; }
-  main { padding: 36px 16px; }
-}
+</body>
+</html>

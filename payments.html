@@ -3,97 +3,208 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About – EAS PTO</title>
+  <title>Payments &amp; Donations – EAS PTO</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .zelle-steps {
+      list-style: none;
+      counter-reset: zelle-counter;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 20px 0 28px;
+    }
+    .zelle-steps li {
+      counter-increment: zelle-counter;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: var(--cream);
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-size: 0.93rem;
+      color: var(--text);
+    }
+    .zelle-steps li::before {
+      content: counter(zelle-counter);
+      background: var(--forest);
+      color: var(--white);
+      font-weight: 700;
+      font-size: 0.8rem;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .zelle-email {
+      display: inline-block;
+      background: var(--mint);
+      color: var(--forest-dk);
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 5px;
+      font-family: monospace;
+      font-size: 0.97rem;
+    }
+    .scope-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 20px 0 0;
+    }
+    .scope-box {
+      border-radius: 8px;
+      padding: 18px 20px;
+    }
+    .scope-box.yes {
+      background: #eaf5e8;
+      border: 1px solid #b2d9ae;
+    }
+    .scope-box.no {
+      background: #fdf0ee;
+      border: 1px solid #f0c4bb;
+    }
+    .scope-box h4 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .scope-box.yes h4 { color: #2d6e27; }
+    .scope-box.no h4 { color: #b94035; }
+    .scope-box ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .scope-box li {
+      font-size: 0.88rem;
+      color: var(--text);
+      display: flex;
+      align-items: flex-start;
+      gap: 7px;
+    }
+    .scope-box li::before { flex-shrink: 0; margin-top: 1px; }
+    .scope-box.yes li::before { content: '✅'; font-size: 0.8rem; }
+    .scope-box.no li::before { content: '❌'; font-size: 0.8rem; }
+    @media (max-width: 600px) {
+      .scope-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
 
   <script src="js/nav.js"></script>
 
   <div class="page-header">
-    <h1>About the EAS PTO</h1>
-    <p>Who we are, what we stand for, and how we're organized.</p>
+    <h1>Payments &amp; Donations</h1>
+    <p>Support our students and programs — every dollar makes a difference.</p>
   </div>
 
   <main>
 
-    <!-- MISSION -->
-    <h2 class="section-title">Our Mission</h2>
-    <div class="divider"></div>
-    <ul class="mission-list">
-      <li>To promote the participation of parents in the educational process.</li>
-      <li>To promote communication between teachers, parents, and students.</li>
-      <li>To generate financial support for educational programs.</li>
-      <li>To provide opportunities for student involvement in the community.</li>
-      <li>To enhance the educational experience through environmental awareness and adventure learning opportunities.</li>
-    </ul>
-
-    <!-- JOIN -->
-    <h2 class="section-title">Join the PTO</h2>
-    <div class="divider"></div>
-    <div class="info-box" style="margin-bottom:40px;">
-      <p>We'd love to have you! Download our membership form, fill it out, and return it to the EAS Office — or email it to <a href="mailto:treasurer@easpto.org" style="color:var(--forest);font-weight:600;">treasurer@easpto.org</a>. You can also find a copy in the PTO Basket in the EAS office.</p>
-      <a href="docs/membership-form.pdf" class="btn btn-forest" style="margin-top:8px;" download>📄 Download Membership Form</a>
+    <!-- PAYMENT POLICY -->
+    <div class="highlight-box" style="margin-bottom: 40px;">
+      <h2>Payment Policy</h2>
+      <p>Unless otherwise noted, all electives and PTO program fees must be submitted to the EAS PTO. We prefer payments via <strong>Zelle</strong>. Cash and checks can be dropped off in the EAS Office.</p>
     </div>
 
-    <!-- DOCUMENTS -->
-    <h2 class="section-title">Documents</h2>
+    <!-- ZELLE -->
+    <h2 class="section-title" id="zelle">Pay by Zelle</h2>
     <div class="divider"></div>
-    <div class="doc-list">
-      <a href="docs/membership-form.pdf" class="doc-link" download><span class="doc-icon">📋</span> Membership Form</a>
-      <a href="docs/budget.pdf" class="doc-link" download><span class="doc-icon">💰</span> 2025–2026 Budget</a>
-      <a href="docs/standing-rules.pdf" class="doc-link" download><span class="doc-icon">📜</span> Standing Rules</a>
-      <a href="docs/org-chart.pdf" class="doc-link" download><span class="doc-icon">🗂️</span> Organizational Chart</a>
-      <a href="meetings.html" class="doc-link"><span class="doc-icon">📅</span> Meeting Info</a>
-    </div>
 
-    <!-- OFFICERS -->
-    <h2 class="section-title">2024–2025 Board of Officers</h2>
-    <div class="divider"></div>
-    <div class="officer-grid">
-      <div class="officer-card">
-        <div class="officer-role">Co-Presidents</div>
-        <div class="officer-name">Susan Cockrell</div>
-        <div class="officer-name">Sara Oppler</div>
-      </div>
-      <div class="officer-card">
-        <div class="officer-role">VP of Curriculum Support</div>
-        <div class="officer-name">Stephanie Chow</div>
-      </div>
-      <div class="officer-card">
-        <div class="officer-role">Co-Treasurers</div>
-        <div class="officer-name">Michelle McPherson</div>
-        <div class="officer-name">Cameron Stillion</div>
-      </div>
-      <div class="officer-card">
-        <div class="officer-role">Assistant Treasurer</div>
-        <div class="officer-name">Alice Wong</div>
-      </div>
-      <div class="officer-card">
-        <div class="officer-role">VP of Student Activities</div>
-        <div class="officer-name">Shannon Martin</div>
-      </div>
-      <div class="officer-card">
-        <div class="officer-role">Secretary</div>
-        <div class="officer-name">Jennifer Junkin</div>
-      </div>
-      <div class="officer-card">
-        <div class="officer-role">VP of Information Support</div>
-        <div class="officer-name">Jaime Lusardo</div>
+    <div class="program-section">
+      <h3>⚡ Fast, free, and easy</h3>
+      <p>EAS PTO is enrolled in Zelle to make it easy for families to pay electronically. Zelle is offered by most banks and credit unions at no charge — no transaction fees for you or for us.</p>
+
+      <p style="margin: 20px 0 6px; font-weight: 600; color: var(--forest-dk); font-size: 1.05rem;">Zelle to: <span class="zelle-email">treasurer@easpto.org</span></p>
+      <p style="margin-bottom:20px;"><a href="zelle.html" style="color:var(--forest);font-weight:600;">→ View full Zelle instructions with bank-specific steps</a></p>
+
+      <ol class="zelle-steps">
+        <li>Open your bank's online banking site or mobile app and go to the <strong>Zelle</strong> tab or section.</li>
+        <li>Add EAS PTO as a payee using the email <strong>treasurer@easpto.org</strong>. Set the type to <strong>Personal</strong>, first name <strong>EAS</strong>, last name <strong>PTO</strong>. The email address is the most important part.</li>
+        <li>Once the payee is added, select EAS PTO and enter the payment amount.</li>
+        <li>You can add something to the comment/memo box for your own tracking — but note that <strong>comments do not come through to the Treasurer</strong>, so don't rely on them for communication.</li>
+        <li>Submit your payment. You're done!</li>
+      </ol>
+
+      <div class="info-box" style="margin-bottom: 0;">
+        <p><strong>Heads up:</strong> If your bank account is not registered under one of the parent names on file with EAS, it can be hard for our Treasurer to match your payment to the right student. If that's the case, please email <a href="mailto:treasurer@easpto.org" style="color:var(--forest);font-weight:600;">treasurer@easpto.org</a> with a screenshot of the transaction and a note about which student you're paying for.</p>
+        <p style="margin-top: 10px;">Questions? Contact our Treasurer at <a href="mailto:treasurer@easpto.org" style="color:var(--forest);font-weight:600;">treasurer@easpto.org</a>.</p>
       </div>
     </div>
 
-    <!-- CONTACT -->
-    <div class="highlight-box">
-      <h2>Contact the Board</h2>
-      <p>Have questions, ideas, or want to get more involved? We'd love to hear from you. Reach out to the co-presidents at <a href="mailto:president@easpto.org" style="color:var(--mint);font-weight:600;">president@easpto.org</a> or contact our treasurer at <a href="mailto:treasurer@easpto.org" style="color:var(--mint);font-weight:600;">treasurer@easpto.org</a>.</p>
+    <!-- WHAT ZELLE COVERS -->
+    <h2 class="section-title" style="margin-top: 16px;">What Can I Pay by Zelle?</h2>
+    <div class="divider"></div>
+
+    <div class="program-section">
+      <p>Zelle can only be used for payments made <strong>directly to EAS PTO</strong>. Some fees go directly to the school and still require cash or check — Zelle cannot be used for those.</p>
+      <div class="scope-grid">
+        <div class="scope-box yes">
+          <h4>Pay EAS PTO via Zelle</h4>
+          <ul>
+            <li>PTO Membership</li>
+            <li>Family Contribution</li>
+            <li>Wednesday Electives</li>
+            <li>Bingo</li>
+            <li>Student Socials</li>
+          </ul>
+        </div>
+        <div class="scope-box no">
+          <h4>Pay school by cash or check</h4>
+          <ul>
+            <li>Camps</li>
+            <li>Classroom fees</li>
+            <li>April Adventures</li>
+            <li>Spring trips</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- CHECK / CASH -->
+    <h2 class="section-title" style="margin-top: 16px;">Pay by Check or Cash</h2>
+    <div class="divider"></div>
+
+    <div class="program-section">
+      <h3>🏫 Drop off at the EAS Office</h3>
+      <p>Cash and checks are accepted and can be dropped off at the EAS Office during school hours. Make checks payable to <strong>EAS PTO</strong>.</p>
+      <p>We encourage Zelle when possible — it saves time and makes reconciliation much easier for our Treasurer — but we will always accept cash and checks.</p>
+    </div>
+
+    <!-- DONATE -->
+    <h2 class="section-title" style="margin-top: 16px;">Make a Donation</h2>
+    <div class="divider"></div>
+
+    <div class="payment-card">
+      <span class="payment-icon">💚</span>
+      <div class="payment-body">
+        <h3>Support EAS Students &amp; Programs</h3>
+        <p>General donations of any amount go directly toward enriching the EAS experience for all students. Zelle to <span class="zelle-email">treasurer@easpto.org</span> with "Donation" in your memo, or drop off cash or a check at the EAS Office.</p>
+        <a href="about.html" class="btn btn-forest">Join the PTO</a>
+      </div>
+    </div>
+
+    <!-- FINANCIAL ASSISTANCE -->
+    <h2 class="section-title" style="margin-top: 16px;">Financial Assistance</h2>
+    <div class="divider"></div>
+    <div class="info-box">
+      <p>We believe every EAS student should be able to participate fully in all programs, regardless of financial circumstances. If your family needs support covering program fees, please reach out confidentially to <a href="mailto:treasurer@easpto.org" style="color:var(--forest);font-weight:600;">treasurer@easpto.org</a>.</p>
+      <p>You can also visit the <a href="https://eas.lwsd.org/students-and-families/financial-assistance-information" target="_blank" style="color:var(--forest);font-weight:600;">EAS school site</a> for district-level financial assistance information.</p>
     </div>
 
   </main>
 
   <div class="contact-strip">
-    <p>Questions? Reach out anytime.</p>
-    <a href="mailto:president@easpto.org">president@easpto.org</a>
+    <p>Payment questions? Contact our Treasurer.</p>
+    <a href="mailto:treasurer@easpto.org">treasurer@easpto.org</a>
   </div>
 
 </body>
