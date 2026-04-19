@@ -45,8 +45,9 @@
     }
     .steps-list li {
       counter-increment: steps;
-      display: flex;
-      align-items: flex-start;
+      display: grid;
+      grid-template-columns: 30px 1fr;
+      align-items: start;
       gap: 16px;
       background: var(--white);
       border-radius: 10px;
@@ -67,7 +68,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-shrink: 0;
       margin-top: 2px;
     }
     .steps-list li strong { color: var(--forest-dk); }
@@ -109,8 +109,9 @@
     }
     .bank-steps li {
       counter-increment: bank-steps;
-      display: flex;
-      align-items: flex-start;
+      display: grid;
+      grid-template-columns: 24px 1fr;
+      align-items: start;
       gap: 14px;
       background: var(--cream);
       border-radius: 8px;
@@ -130,7 +131,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-shrink: 0;
       margin-top: 2px;
     }
     .bank-steps li strong { color: var(--forest-dk); }
