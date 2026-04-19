@@ -6,40 +6,6 @@
   <title>Payments &amp; Donations – EAS PTO</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
-    .zelle-steps {
-      list-style: none;
-      counter-reset: zelle-counter;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin: 20px 0 28px;
-    }
-    .zelle-steps li {
-      counter-increment: zelle-counter;
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-      background: var(--cream);
-      border-radius: 8px;
-      padding: 14px 18px;
-      font-size: 0.93rem;
-      color: var(--text);
-    }
-    .zelle-steps li::before {
-      content: counter(zelle-counter);
-      background: var(--forest);
-      color: var(--white);
-      font-weight: 700;
-      font-size: 0.8rem;
-      width: 26px;
-      height: 26px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
     .zelle-email {
       display: inline-block;
       background: var(--mint);
@@ -49,6 +15,39 @@
       border-radius: 5px;
       font-family: monospace;
       font-size: 0.97rem;
+    }
+    .step-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 20px 0 28px;
+      padding: 0;
+    }
+    .step-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: var(--cream);
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-size: 0.93rem;
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .step-num {
+      background: var(--forest);
+      color: var(--white);
+      font-weight: 700;
+      font-size: 0.8rem;
+      min-width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
     }
     .scope-grid {
       display: grid;
@@ -60,14 +59,8 @@
       border-radius: 8px;
       padding: 18px 20px;
     }
-    .scope-box.yes {
-      background: #eaf5e8;
-      border: 1px solid #b2d9ae;
-    }
-    .scope-box.no {
-      background: #fdf0ee;
-      border: 1px solid #f0c4bb;
-    }
+    .scope-box.yes { background: #eaf5e8; border: 1px solid #b2d9ae; }
+    .scope-box.no  { background: #fdf0ee; border: 1px solid #f0c4bb; }
     .scope-box h4 {
       font-size: 0.8rem;
       text-transform: uppercase;
@@ -76,23 +69,9 @@
       margin-bottom: 10px;
     }
     .scope-box.yes h4 { color: #2d6e27; }
-    .scope-box.no h4 { color: #b94035; }
-    .scope-box ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-    .scope-box li {
-      font-size: 0.88rem;
-      color: var(--text);
-      display: flex;
-      align-items: flex-start;
-      gap: 7px;
-    }
-    .scope-box li::before { flex-shrink: 0; margin-top: 1px; }
-    .scope-box.yes li::before { content: '✅'; font-size: 0.8rem; }
-    .scope-box.no li::before { content: '❌'; font-size: 0.8rem; }
+    .scope-box.no h4  { color: #b94035; }
+    .scope-box ul { list-style: none; display: flex; flex-direction: column; gap: 6px; padding: 0; }
+    .scope-box li { font-size: 0.88rem; color: var(--text); display: flex; align-items: flex-start; gap: 7px; }
     @media (max-width: 600px) {
       .scope-grid { grid-template-columns: 1fr; }
     }
@@ -109,7 +88,7 @@
 
   <main>
 
-    <!-- DONATE - moved to top so Donate button lands here -->
+    <!-- DONATE -->
     <h2 class="section-title" id="donate">Make a Donation</h2>
     <div class="divider"></div>
 
@@ -140,13 +119,28 @@
       <p style="margin: 20px 0 6px; font-weight: 600; color: var(--forest-dk); font-size: 1.05rem;">Zelle to: <span class="zelle-email">treasurer@easpto.org</span></p>
       <p style="margin-bottom:20px;"><a href="zelle.html" style="color:var(--forest);font-weight:600;">→ View full Zelle instructions with bank-specific steps</a></p>
 
-      <ol class="zelle-steps">
-        <li>Open your bank's online banking site or mobile app and go to the <strong>Zelle</strong> tab or section.</li>
-        <li>Add EAS PTO as a payee using the email <strong>treasurer@easpto.org</strong>. Set the type to <strong>Personal</strong>, first name <strong>EAS</strong>, last name <strong>PTO</strong>. The email address is the most important part.</li>
-        <li>Once the payee is added, select EAS PTO and enter the payment amount.</li>
-        <li>You can add something to the comment/memo box for your own tracking — but note that <strong>comments do not come through to the Treasurer</strong>, so don't rely on them for communication.</li>
-        <li>Submit your payment. You're done!</li>
-      </ol>
+      <ul class="step-list">
+        <li>
+          <span class="step-num">1</span>
+          <span>Open your bank's online banking site or mobile app and go to the Zelle tab or section.</span>
+        </li>
+        <li>
+          <span class="step-num">2</span>
+          <span>Add EAS PTO as a payee using the email <strong>treasurer@easpto.org</strong>. Set the type to Personal, first name EAS, last name PTO. The email address is the most important part.</span>
+        </li>
+        <li>
+          <span class="step-num">3</span>
+          <span>Once the payee is added, select EAS PTO and enter the payment amount.</span>
+        </li>
+        <li>
+          <span class="step-num">4</span>
+          <span>In the memo box, include your student's name and what you're paying for — for example: "Jane Smith, Session 1 Elective fee." Note that comments do not come through to the Treasurer, so don't rely on them for tracking.</span>
+        </li>
+        <li>
+          <span class="step-num">5</span>
+          <span>Submit your payment. You're done!</span>
+        </li>
+      </ul>
 
       <div class="info-box" style="margin-bottom: 0;">
         <p><strong>Heads up:</strong> If your bank account is not registered under one of the parent names on file with EAS, it can be hard for our Treasurer to match your payment to the right student. If that's the case, please email <a href="mailto:treasurer@easpto.org" style="color:var(--forest);font-weight:600;">treasurer@easpto.org</a> with a screenshot of the transaction and a note about which student you're paying for.</p>
@@ -159,20 +153,20 @@
     <div class="divider"></div>
 
     <div class="program-section">
-      <p>Zelle can only be used for payments made <strong>directly to EAS PTO</strong>. Some fees go directly to the school and still require cash or check — Zelle cannot be used for those.</p>
+      <p>Zelle can only be used for payments made <strong>directly to EAS PTO</strong>. Some fees go directly to the school and still require cash or check.</p>
       <div class="scope-grid">
         <div class="scope-box yes">
-          <h4>Pay EAS PTO via Zelle</h4>
+          <h4>✅ Pay EAS PTO via Zelle</h4>
           <ul>
             <li>PTO Membership</li>
             <li>Family Contribution</li>
             <li>Wednesday Electives</li>
-            <li>Bingo</li>
-            <li>Student Socials</li>
+            <li>Yearbooks</li>
+            <li>Bingo / Student Socials</li>
           </ul>
         </div>
         <div class="scope-box no">
-          <h4>Pay school by cash or check</h4>
+          <h4>❌ Must pay school by cash/check</h4>
           <ul>
             <li>Camps</li>
             <li>Classroom fees</li>
