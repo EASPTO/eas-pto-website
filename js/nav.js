@@ -29,6 +29,7 @@
         <li><a href="programs.html"${isActive('programs.html')}>Programs</a></li>
         <li><a href="meetings.html"${isActive('meetings.html')}>Meetings</a></li>
         <li><a href="staff-favorites.html"${isActive('staff-favorites.html')}>Staff Favorites</a></li>
+        <li><a href="whatsapp.html"${isActive('whatsapp.html')}>WhatsApp</a></li>
         <li><a href="payments.html" class="nav-donate">Donate / Pay</a></li>
       </ul>
     </div>
