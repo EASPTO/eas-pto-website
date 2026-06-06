@@ -40,7 +40,15 @@
     <p style="margin-top:6px"><a href="https://eas.lwsd.org" target="_blank">Visit the EAS School Website →</a></p>
   </footer>`;
 
-  // Insert nav before body content
-  document.body.insertAdjacentHTML('afterbegin', navHTML);
-  document.body.insertAdjacentHTML('beforeend', footerHTML);
+  function injectSharedLayout() {
+    document.body.insertAdjacentHTML('afterbegin', navHTML);
+    document.body.insertAdjacentHTML('beforeend', footerHTML);
+  }
+
+  // Wait for the full body to be parsed so footer is placed at the true bottom.
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', injectSharedLayout);
+  } else {
+    injectSharedLayout();
+  }
 })();
