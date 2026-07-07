@@ -2,6 +2,14 @@
 // Include this script on every page
 
 (function() {
+  // Redirect the old .com domain to the primary .org site.
+  // Only fires when the page is served under easpto.com / www.easpto.com.
+  const host = window.location.hostname.toLowerCase();
+  if (host === 'easpto.com' || host === 'www.easpto.com') {
+    window.location.replace('https://www.easpto.org' + window.location.pathname + window.location.search + window.location.hash);
+    return;
+  }
+
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
   function isActive(page) {
