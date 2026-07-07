@@ -53,7 +53,7 @@ Done. From now on, always pick **eas-pto-website** from the Current Repository d
 ### Step 1 — Ask Copilot
 In this workspace's chat, say what you want. Examples:
 - "On the payments page, change the Zelle email to treasurer@easpto.org."
-- "On the about page, update the board list: remove Jennifer Junkin, add Maria Lopez as Secretary."
+- "On the about page, update the board list: change the Secretary name to Anna Ellermeier."
 - "Add a new sentence to the top of the programs page about spring camps."
 
 Copilot edits the right file. You don't need to know which file it is.
