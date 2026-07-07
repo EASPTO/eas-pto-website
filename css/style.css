@@ -580,3 +580,27 @@ footer a:hover { color: var(--mint); }
   .payment-card { flex-direction: column; }
   main { padding: 36px 16px; }
 }
+
+/* ── PHOTO GALLERY ── */
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+  margin-top: 22px;
+}
+.photo-gallery img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: block;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.photo-gallery img:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: var(--shadow-lg);
+}
+@media (max-width: 600px) {
+  .photo-gallery { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+}
