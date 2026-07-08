@@ -604,3 +604,41 @@ footer a:hover { color: var(--mint); }
 @media (max-width: 600px) {
   .photo-gallery { grid-template-columns: repeat(2, 1fr); gap: 8px; }
 }
+
+/* ── HERO POLAROIDS ── */
+.hero-photos { display: none; }
+@media (min-width: 1200px) {
+  .hero-photos {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 270px;
+    z-index: 1;
+    pointer-events: none;
+  }
+  .hero-photos-left { left: 0; }
+  .hero-photos-right { right: 0; }
+  .hero { min-height: 500px; }
+}
+.polaroid {
+  position: absolute;
+  width: 145px;
+  background: #fff;
+  padding: 9px 9px 8px;
+  border-radius: 3px;
+  box-shadow: 0 12px 26px rgba(0,0,0,0.34);
+}
+.polaroid img {
+  width: 100%;
+  height: 105px;
+  object-fit: cover;
+  display: block;
+}
+.polaroid figcaption {
+  font-family: 'Lora', serif;
+  font-size: 0.72rem;
+  color: #4a4a4a;
+  text-align: center;
+  padding-top: 7px;
+}
