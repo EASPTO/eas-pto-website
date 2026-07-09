@@ -10,6 +10,65 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <style>
+    .yearbook-banner {
+      display: flex;
+      align-items: stretch;
+      background: var(--cream);
+      border-radius: 12px;
+      overflow: hidden;
+      margin: 0 0 40px;
+      text-decoration: none;
+      color: var(--text);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .yearbook-banner:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.10); }
+    .yearbook-banner-photo {
+      flex: 0 0 38%;
+      background: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+    }
+    .yearbook-banner-photo img {
+      max-width: 100%;
+      max-height: 240px;
+      object-fit: contain;
+      border-radius: 6px;
+    }
+    .yearbook-banner-text {
+      padding: 26px 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    .yearbook-tag {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--forest);
+      margin-bottom: 8px;
+    }
+    .yearbook-banner-text h3 {
+      margin: 0 0 8px;
+      font-size: 1.4rem;
+      color: var(--forest-dk);
+    }
+    .yearbook-banner-text p {
+      margin: 0 0 18px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    @media (max-width: 640px) {
+      .yearbook-banner { flex-direction: column; }
+      .yearbook-banner-photo { flex-basis: auto; padding: 20px; }
+      .yearbook-banner-photo img { max-height: 200px; }
+    }
+  </style>
 </head>
 <body>
 
@@ -56,6 +115,19 @@
       <h2>Welcome, EAS Families!</h2>
       <p>The EAS PTO exists to support the students, staff, and programs that make our school so incredible. We look forward to helping EAS have a successful and rewarding school year. Explore our site to learn how to get involved, donate, or pay for electives and programs.</p>
     </div>
+
+    <!-- YEARBOOK CTA -->
+    <a href="yearbook.html" class="yearbook-banner">
+      <div class="yearbook-banner-photo">
+        <img src="images/web/yearbooks.png" alt="This year's EAS yearbook">
+      </div>
+      <div class="yearbook-banner-text">
+        <span class="yearbook-tag">📸 Yearbook</span>
+        <h3>Share your yearbook photos</h3>
+        <p>Help fill this year's yearbook. Upload your favorite photos in a few taps, no login needed.</p>
+        <span class="btn btn-forest">Add your photos</span>
+      </div>
+    </a>
 
     <!-- WHAT WE DO -->
     <h2 class="section-title">What We Do</h2>
