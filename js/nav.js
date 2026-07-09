@@ -25,6 +25,8 @@
              onerror="this.style.display='none'">
         <div class="nav-brand-text">
           <span class="nav-brand-name">Environmental &amp; Adventure School</span>
+          <span class="nav-brand-meta">Kirkland, WA</span>
+          <span class="nav-brand-meta">Lake Washington School District Choice School</span>
           <span class="nav-brand-sub">Parent Teacher Organization</span>
         </div>
       </a>

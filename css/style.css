@@ -68,6 +68,11 @@ nav {
   color: var(--white);
   line-height: 1.2;
 }
+.nav-brand-meta {
+  font-size: 0.68rem;
+  color: var(--sage);
+  line-height: 1.3;
+}
 .nav-brand-sub {
   font-size: 0.7rem;
   color: var(--sage);
