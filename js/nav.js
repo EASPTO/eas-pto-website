@@ -24,9 +24,8 @@
              alt="EAS Logo"
              onerror="this.style.display='none'">
         <div class="nav-brand-text">
-          <span class="nav-brand-name">Environmental &amp; Adventure School</span>
-          <span class="nav-brand-meta">Kirkland, WA | Lake Washington School District Choice School</span>
-          <span class="nav-brand-sub">Parent Teacher Organization</span>
+          <span class="nav-brand-name">Environmental &amp; Adventure School PTO</span>
+          <span class="nav-brand-meta">Kirkland, WA | LWSD Choice School</span>
         </div>
       </a>
       <button class="nav-hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">
