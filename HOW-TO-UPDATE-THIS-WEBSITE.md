@@ -87,6 +87,8 @@ Copilot will tell you which page it changed. Want to preview before publishing? 
 | `payments.html` | Donations, payments, Zelle summary, RaiseRight |
 | `zelle.html` | Full Zelle instructions with bank tabs |
 | `staff-favorites.html` | Staff cards with search |
+| `yearbook.html` | Yearbook photo information and upload button |
+| `yearbook-access.html` | Shared-password page for the yearbook photo repository |
 | `whatsapp.html` | WhatsApp community page |
 
 Shared pieces (Copilot handles these, you rarely touch them):
@@ -97,6 +99,13 @@ Shared pieces (Copilot handles these, you rarely touch them):
 ---
 
 ## Common quick tasks
+
+**Change the yearbook photo password:**
+1. Open `js/yearbook-access-config.js`.
+2. Replace only the text between the quote marks after `password:`. Keep the quote marks and comma.
+3. Commit and push the change in GitHub Desktop.
+
+The password check is intentionally basic. It discourages casual public access without requiring family accounts, but it is not enterprise-grade security. The SharePoint destination is stored separately in `js/yearbook-destination.js` and is loaded by the page only after access succeeds.
 
 **Swap out a PDF (like a new membership form):**
 1. Put the new PDF in the `docs` folder.

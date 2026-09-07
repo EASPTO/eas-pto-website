@@ -3,6 +3,10 @@
     {
       "route": "/yearbook",
       "rewrite": "/yearbook.html"
+    },
+    {
+      "route": "/yearbook-access",
+      "rewrite": "/yearbook-access.html"
     }
   ]
 }

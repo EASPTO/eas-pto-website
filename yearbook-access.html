@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Password-protected access to the EAS yearbook photo repository.">
+  <title>Yearbook photo access &ndash; EAS PTO</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/yearbook-access.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
+<body>
+
+  <script src="js/nav.js"></script>
+
+  <div class="page-header yearbook-access-header">
+    <h1>Enter the yearbook photo password</h1>
+    <p>This photo repository is intended for current EAS families.</p>
+  </div>
+
+  <main class="yearbook-access-main">
+    <section class="access-panel" aria-labelledby="access-title">
+      <div class="access-icon" aria-hidden="true">📸</div>
+      <div class="access-copy">
+        <h2 id="access-title">Yearbook photo access</h2>
+        <p>The password was provided through school communications. Enter it below to continue to the EAS yearbook photo repository.</p>
+      </div>
+
+      <form id="yearbook-access-form" novalidate>
+        <label for="yearbook-password">Password</label>
+        <input
+          id="yearbook-password"
+          name="password"
+          type="password"
+          autocomplete="current-password"
+          autocapitalize="none"
+          spellcheck="false"
+          required
+          aria-describedby="password-message"
+        >
+
+        <label class="show-password-control" for="show-password">
+          <input id="show-password" type="checkbox">
+          <span>Show password</span>
+        </label>
+
+        <p id="password-message" class="form-message" role="alert" aria-live="polite"></p>
+
+        <button class="btn btn-forest access-submit" type="submit">Continue to photos</button>
+      </form>
+
+      <a class="back-link" href="yearbook.html">&larr; Back to yearbook photos</a>
+    </section>
+  </main>
+
+  <noscript>
+    <div class="noscript-message">JavaScript must be enabled to access the yearbook photo repository.</div>
+  </noscript>
+
+  <script src="js/yearbook-access-config.js"></script>
+  <script src="js/yearbook-access.js"></script>
+</body>
+</html>
