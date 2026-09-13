@@ -9,6 +9,11 @@
       "rewrite": "/yearbook-access.html"
     },
     {
+      "route": "/yearbook/upload",
+      "redirect": "https://ptoschool.sharepoint.com/:f:/s/EASPTO/IgAfM9OIMVEcSrTs1ijsNVl0AQktoA3fZv8WR0voczLg-ZY",
+      "statusCode": 301
+    },
+    {
       "route": "/yearbook/camphamilton",
       "redirect": "https://ptoschool.sharepoint.com/:f:/s/EASPTO/IgDmTCBhmD5DR4gSpgXWp6ipAUo2NXlSxefGAZWwVnGZRGk?e=Zhvl5B",
       "statusCode": 301
