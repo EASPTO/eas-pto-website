@@ -10,7 +10,7 @@
     },
     {
       "route": "/yearbook/upload",
-      "redirect": "https://ptoschool.sharepoint.com/:f:/s/EASPTO/IgAfM9OIMVEcSrTs1ijsNVl0AQktoA3fZv8WR0voczLg-ZY",
+      "redirect": "https://ptoschool.sharepoint.com/sites/EASPTO/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FEASPTO%2FShared%20Documents%2FYearbook",
       "statusCode": 301
     },
     {
