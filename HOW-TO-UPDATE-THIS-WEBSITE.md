@@ -107,6 +107,14 @@ Shared pieces (Copilot handles these, you rarely touch them):
 
 The password check is intentionally basic. It discourages casual public access without requiring family accounts, but it is not enterprise-grade security. The SharePoint destination is stored separately in `js/yearbook-destination.js` and is loaded by the page only after access succeeds.
 
+**Share the yearbook photo library without a sign-in prompt:**
+- Use https://www.easpto.org/yearbookphotos or https://www.easpto.org/yearbook/upload. Both shortcuts go directly to the existing SharePoint "Anyone with the link can edit" link, without the website password page.
+- Do not share the document library's address-bar URL instead. That address does not grant anonymous access and can prompt visitors to sign in.
+- Anyone who receives the public editing link can access the photos and upload or delete them. The link can be forwarded.
+- The current public link expires October 7, 2027. If it is replaced, update both shortcuts in `staticwebapp.config.json` and the destination in `js/yearbook-destination.js`.
+- The upload shortcut uses a temporary redirect so future link changes are not permanently cached. Previously cached redirects may still require clearing browser site data.
+- School and workplace web filters can still block access regardless of SharePoint sharing permissions.
+
 **Swap out a PDF (like a new membership form):**
 1. Put the new PDF in the `docs` folder.
 2. Give it the **exact same filename** as the old one (example: `membership-form.pdf`), replacing it.
