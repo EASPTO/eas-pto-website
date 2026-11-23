@@ -14,6 +14,11 @@
       "statusCode": 302
     },
     {
+      "route": "/babyphotos",
+      "redirect": "https://ptoschool.sharepoint.com/:f:/s/EASPTO/IgDIm6If34GUT7je6Q29jyErARGoF3OxQYMEvJi0dskeubE?e=hLexKT",
+      "statusCode": 302
+    },
+    {
       "route": "/yearbook/upload",
       "redirect": "https://ptoschool.sharepoint.com/:f:/s/EASPTO/IgAfM9OIMVEcSrTs1ijsNVl0AQktoA3fZv8WR0voczLg-ZY?e=wr90Ad",
       "statusCode": 302
